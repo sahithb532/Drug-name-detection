@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Your existing head content here... -->
+
+  <style>
+    body {
+      background-size: cover;
+      background-image: url('https://www.universityofcalifornia.edu/sites/default/files/generic-drugs-istock.jpg');
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .upload-container {
+      text-align: center;
+      margin-top: 25vh;
+    }
+
+    .form-container {
+      display: inline-block;
+      text-align: left;
+    }
+
+    .upload-heading {
+      background-color: transparent !important;
+      text-align: center;
+      font-size: 2rem; 
+      margin-bottom: 20px; 
+    }
+
+    .form-signin input[type="file"] {
+      margin-bottom: 3em; 
+    }
+  </style>
+</head>
+
+<body>
+
+  
+
+  <main id="main">
+   
+
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="container upload-container">
+          <div class="row">
+            <div class="col-lg-6 offset-lg-3 form-container">
+
+              <form action="/upload" class="form-signin" method="post" enctype="multipart/form-data" name="forml">
+                <h1 class="h3 mb-3 font-weight-normal upload-heading">Upload any image</h1>
+                <input type="file" name="file" class="form-control-file" id="inputfile">
+                <br/>
+                <div class="border p-2 rounded">
+                  <button class="btn btn-block btn-default btn-sm" type="submit">Submit</button>
+                </div>
+
+                <h1 class="h3 mb-3 font-weight-normal">
+                  {% if result %}
+                  <h1>Check Predicted Result On Recently Created folder in Runs->Detect</h1>
+                  {% endif %}
+                </h1>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+</body>
+
+</html>
